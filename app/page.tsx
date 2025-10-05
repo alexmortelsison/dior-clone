@@ -1,11 +1,32 @@
 "use client";
-import { error } from "console";
-import React, { useRef } from "react";
+import gsap from "gsap";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useRef } from "react";
 
 export default function Home() {
   const leftVideoRef = useRef<HTMLVideoElement | null>(null);
   const rightVideoRef = useRef<HTMLVideoElement | null>(null);
-  const onClickRef = useRef(null);
+  const onClickRef1 = useRef(null);
+  const onClickRef2 = useRef(null);
+  const router = useRouter();
+
+  const handleOnClick = () => {
+    gsap.to(onClickRef1.current, {
+      y: 350,
+      delay: 0.5,
+      duration: 1,
+      ease: "power2.out",
+    });
+    gsap.to(onClickRef2.current, {
+      y: 350,
+      delay: 0.5,
+      duration: 1,
+      ease: "power2.out",
+    });
+    setTimeout(() => {
+      router.push("/home");
+    }, 2500);
+  };
 
   const handleMouseEnterLeft = () => {
     if (leftVideoRef.current) {
@@ -44,7 +65,10 @@ export default function Home() {
             className="object-cover w-screen -z-50"
             ref={leftVideoRef}
           />
-          <div className="absolute inset-0  flex flex-col justify-center items-center pt-92 gap-y-2">
+          <div
+            className="absolute inset-0  flex flex-col justify-center items-center pt-92 gap-y-2"
+            ref={onClickRef1}
+          >
             <p className="text-white text-4xl tracking-tight">
               Fashion & Accessories
             </p>
@@ -64,7 +88,10 @@ export default function Home() {
             className="object-cover w-screen -z-50"
             ref={rightVideoRef}
           />
-          <div className="absolute inset-0  flex flex-col justify-center items-center pt-92 gap-y-2">
+          <div
+            className="absolute inset-0  flex flex-col justify-center items-center pt-92 gap-y-2"
+            ref={onClickRef2}
+          >
             <p className="text-white text-4xl tracking-tight">
               Fragrance & Beauty
             </p>
@@ -74,7 +101,10 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute inset-0 flex justify-center items-center">
-        <h1 className="text-white text-8xl font-nicolas tracking-tighter z-50">
+        <h1
+          className="text-white text-8xl font-nicolas tracking-tighter z-50 hover:cursor-pointer scale-100"
+          onClick={() => handleOnClick()}
+        >
           DIOR
         </h1>
       </div>
