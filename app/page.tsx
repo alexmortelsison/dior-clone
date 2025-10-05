@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 export default function Home() {
   const leftVideoRef = useRef<HTMLVideoElement | null>(null);
   const rightVideoRef = useRef<HTMLVideoElement | null>(null);
+  const onClickRef = useRef(null);
 
   const handleMouseEnterLeft = () => {
     if (leftVideoRef.current) {
