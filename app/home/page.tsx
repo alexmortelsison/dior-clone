@@ -7,6 +7,7 @@ import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import Link from "next/link";
 import Look from "../components/look";
+import GridComp from "../components/grid";
 
 const navIcons = [
   { icon: <BiSearch />, link: "" },
@@ -81,7 +82,7 @@ export default function Home() {
         <div ref={videoRef} className="opacity-0 px-4 pt-8">
           <video src="/fashionshow.mp4" autoPlay loop muted playsInline></video>
         </div>
-        <div className="mx-auto justify-center items-center text-center">
+        <div className="mx-auto justify-center items-center text-center bg-gray-100 w-screen">
           <p className="text-xl whitespace-nowrap pt-8">
             "To design for a house like Dior, you have to empathize with its
             history and walk alongside it."
@@ -89,8 +90,11 @@ export default function Home() {
           </p>
           <p className="pt-8 text-gray-800 text-sm font-semibold">Learn more</p>
         </div>
-        <div className="mx-auto justify-center items-center text-center pb-16">
+        <div className="">
           <Look />
+        </div>
+        <div className="">
+          <GridComp />
         </div>
       </div>
     </div>

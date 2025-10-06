@@ -13,11 +13,11 @@ const images = [
 
 export default function Look() {
   return (
-    <div className="h-[100vh] w-screen pt-72 mb-16 justify-center items-center flex flex-col">
+    <div className="h-[100vh] w-screen pt-24 pb-24 justify-center items-center flex flex-col bg-gray-100">
       <h1 className="text-4xl font-sans">look</h1>
-      <div className="pt-8 px-48">
+      <div className="pt-8 px-48 h-full">
         <ScrollArea>
-          <div className="flex space-x-6 ">
+          <div className="flex space-x-6 bg-gray-100 w-full">
             {images.map((item, index) => (
               <div key={index} className=" shrink-0">
                 <Image

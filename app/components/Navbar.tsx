@@ -35,7 +35,7 @@ export default function Navbar() {
     });
   });
   return (
-    <nav className="w-screen h-[10vh] flex justify-between items-center px-8">
+    <nav className="w-screen h-[10vh] flex justify-between items-center px-8 bg-gray-100">
       <div className="text-xl opacity-0" ref={menuRef}>
         <HiOutlineMenuAlt4 />
       </div>
