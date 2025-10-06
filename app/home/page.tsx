@@ -8,6 +8,7 @@ import { BsPerson } from "react-icons/bs";
 import Link from "next/link";
 import Look from "../components/look";
 import GridComp from "../components/grid";
+import Footer from "../components/footer";
 
 const navIcons = [
   { icon: <BiSearch />, link: "" },
@@ -49,7 +50,7 @@ export default function Home() {
     });
   });
   return (
-    <div className="h-[100vh] relative inset-0 bg-gray-100">
+    <div className="h-[100vh] relative inset-0 bg-gray-100 w-screen">
       <div className="flex items-center text-center h-[10vh] w-full justify-between px-16 translate-y-100">
         <div ref={menuRef} className="opacity-0">
           <TbMenu />
@@ -95,6 +96,9 @@ export default function Home() {
         </div>
         <div className="">
           <GridComp />
+        </div>
+        <div className="">
+          <Footer />
         </div>
       </div>
     </div>
