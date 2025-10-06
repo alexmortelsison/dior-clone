@@ -35,14 +35,22 @@ export default function Navbar() {
     });
   });
   return (
-    <nav className="w-screen flex justify-between items-center px-8">
+    <nav className="w-screen h-[10vh] flex justify-between items-center px-8">
       <div className="text-xl opacity-0" ref={menuRef}>
         <HiOutlineMenuAlt4 />
       </div>
       <div ref={diorRef}>
-        <h1 className="scale-100">DIOR</h1>
+        <h1 className="text-5xl font-nicolas scale-100 tracking-tighter ">
+          DIOR
+        </h1>
       </div>
-      <div className="flex text-2xl space-x-4 opacity-0" ref={iconsRef}></div>
+      <div className="flex text-2xl space-x-4 opacity-0" ref={iconsRef}>
+        {navIcons.map((item, index) => (
+          <Link key={index} href={item.link}>
+            {item.icon}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }

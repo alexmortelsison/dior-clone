@@ -9,6 +9,7 @@ export default function Home() {
   const onClickRef1 = useRef(null);
   const onClickRef2 = useRef(null);
   const diorRef = useRef(null);
+  const opacityRef = useRef(null);
   const router = useRouter();
   const bgRef = useRef(null);
 
@@ -26,21 +27,27 @@ export default function Home() {
       ease: "power2.out",
     });
     gsap.to(diorRef.current, {
+      opacity: 0,
       scale: 0.6,
-      delay: 0.8,
+      delay: 0.1,
       duration: 0.9,
-      color: "#000000",
-      ease: "power2.inOut",
+      color: "#0000000",
+      ease: "power4.out",
+    });
+    gsap.to(opacityRef.current, {
+      opacity: 1,
+      delay: 0.2,
     });
     gsap.to(bgRef.current, {
-      y: "100vh",
-      duration: 5,
-      delay: 5,
+      opacity: 0,
+      y: "-100vh",
+      duration: 1,
+      delay: 1.1,
       ease: "power2.inOut",
     });
     setTimeout(() => {
       router.push("/home");
-    }, 1400);
+    }, 1100);
   };
 
   const handleMouseEnterLeft = () => {
@@ -66,10 +73,7 @@ export default function Home() {
     }
   };
   return (
-    <div
-      className="h-full w-screen bg-white z-50 relative inset-0 "
-      ref={bgRef}
-    >
+    <div className="h-full w-screen bg-white z-50 inset-0 " ref={bgRef}>
       <div className="h-[100vh] w-full overflow-hidden absolute inset-0 z-30">
         <div className="flex relative inset-0">
           <div
@@ -119,11 +123,21 @@ export default function Home() {
             <div className="absolute bg-black/50 inset-0 group-hover:opacity-0 transition-opacity duration-300 group-hover:cursor-pointer z-10"></div>
           </div>
         </div>
+        <div
+          className="absolute inset-0 flex justify-center items-center opacity-100"
+          onClick={() => handleOnClick()}
+        >
+          <h1
+            className="text-white text-8xl text-center justify-center flex self-center font-nicolas tracking-tighter z-50 hover:cursor-pointer scale-100"
+            ref={diorRef}
+          >
+            DIOR
+          </h1>
+        </div>
         <div className="absolute inset-0 flex justify-center items-center">
           <h1
-            className="text-white text-8xl font-nicolas tracking-tighter z-50 hover:cursor-pointer scale-100"
-            onClick={() => handleOnClick()}
-            ref={diorRef}
+            className="text-black text-6xl font-nicolas tracking-tighter z-50 hover:cursor-pointer scale-80  opacity-0"
+            ref={opacityRef}
           >
             DIOR
           </h1>
