@@ -6,6 +6,7 @@ import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import Link from "next/link";
+import Look from "../components/look";
 
 const navIcons = [
   { icon: <BiSearch />, link: "" },
@@ -87,6 +88,9 @@ export default function Home() {
             <br /> - Jonathan Anderson
           </p>
           <p className="pt-8 text-gray-800 text-sm font-semibold">Learn more</p>
+        </div>
+        <div className="mx-auto justify-center items-center text-center pb-16">
+          <Look />
         </div>
       </div>
     </div>
