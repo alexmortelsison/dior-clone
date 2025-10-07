@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="h-[60vh] w-screen bg-white mt-8 overflow-hidden px-2">
-      <div className="bg-gray-100 p-8 rounded-lg">
+      <div className="bg-white  p-8 rounded-lg">
         <div className="flex justify-between border-b pb-12">
           <div className="flex items-center">
             <div>

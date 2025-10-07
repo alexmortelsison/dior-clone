@@ -50,7 +50,7 @@ export default function Home() {
     });
   });
   return (
-    <div className="h-[100vh] relative inset-0 bg-gray-100 w-screen">
+    <div className="min-h-screen relative inset-0 bg-gray-100 w-screen">
       <div className="flex items-center text-center h-[10vh] w-full justify-between px-16 translate-y-100">
         <div ref={menuRef} className="opacity-0">
           <TbMenu />
@@ -81,7 +81,14 @@ export default function Home() {
           </p>
         </div>
         <div ref={videoRef} className="opacity-0 px-4 pt-8">
-          <video src="/fashionshow.mp4" autoPlay loop muted playsInline></video>
+          <video
+            src="/fashionshow.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-[1600px]"
+          ></video>
         </div>
         <div className="mx-auto justify-center items-center text-center bg-gray-100 w-screen">
           <p className="text-xl whitespace-nowrap pt-8">
