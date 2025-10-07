@@ -92,8 +92,8 @@ export default function Home() {
         </div>
         <div className="mx-auto justify-center items-center text-center bg-gray-100 w-screen">
           <p className="text-xl whitespace-nowrap pt-8">
-            "To design for a house like Dior, you have to empathize with its
-            history and walk alongside it."
+            &quot;To design for a house like Dior, you have to empathize with
+            its history and walk alongside it.&quot;
             <br /> - Jonathan Anderson
           </p>
           <p className="pt-8 text-gray-800 text-sm font-semibold">Learn more</p>

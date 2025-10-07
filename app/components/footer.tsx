@@ -1,6 +1,5 @@
 import { BiChevronRight } from "react-icons/bi";
 import React from "react";
-import Image from "next/image";
 
 export default function Footer() {
   return (
