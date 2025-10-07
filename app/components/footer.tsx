@@ -1,9 +1,10 @@
 import { BiChevronRight } from "react-icons/bi";
 import React from "react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="h-[100vh] w-screen bg-white mt-8 overflow-hidden px-8">
+    <div className="h-[60vh] w-screen bg-white mt-8 overflow-hidden px-2">
       <div className="bg-gray-100 p-8 rounded-lg">
         <div className="flex justify-between border-b pb-12">
           <div className="flex items-center">
@@ -90,6 +91,26 @@ export default function Footer() {
                 General Terms and Conditions of Sale
               </p>
               <p className=" text-gray-500 text-sm">Sitemap</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 text-center items-center w-screen pt-16">
+            <div className="flex space-x-4 whitespace-nowrap">
+              <p>to follow</p>
+              <p>LINE</p>
+              <p>Tiktok</p>
+              <p>Instagram</p>
+              <p>X</p>
+              <p>Facebook</p>
+              <p>Pinterest</p>
+              <p>Snapchat</p>
+              <p>LinkedIn</p>
+            </div>
+            <div>
+              <h1 className="text-4xl font-nicolas">DIOR</h1>
+            </div>
+            <div className="flex items-center pl-64">
+              <p>Country/Region</p>
+              <p>{"Japan (Japanese)"}</p>
             </div>
           </div>
         </div>
